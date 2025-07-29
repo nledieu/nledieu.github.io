@@ -1,1 +1,147 @@
-Hello World
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Joyeux anniversaire</title>
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+  <header>
+    <h1>Et si on jouait?</h1>
+  </header>
+  <main>
+    <section id="intro" class="step active">
+      <h2>Bienvenue ❤️</h2>
+      <p>Un petit jeu t’attend… es-tu prête à découvrir une surprise ?</p>
+      <button onclick="goToStep(1)">Commencer</button>
+    </section>
+
+    <section id="step1" class="step">
+      <h2>Commençons simplement</h2>
+      <p>Regarde cette image...</p>
+      <img src="img/barcelone.jpg" />
+      <p>Sur quel continent sommes-nous?</p>
+      <form>
+        <label>
+          <input type="radio" name="continent" value="Afrique" />
+          Afrique
+        </label><br />
+        <label>
+          <input type="radio" name="continent" value="Europe" />
+          Europe
+        </label><br />
+        <label>
+          <input type="radio" name="continent" value="Moyen-Orient" />
+          Moyen-Orient
+        </label><br />
+      </form>
+    
+      <button class="button" onclick="validateStep1()">Valider</button>
+    </section>
+
+    <section id="step2" class="step">
+      <h2>Souvenir honteux mais souvenir quand même</h2>
+      <p>Il t’a offert un moment rare : une sieste au cinéma.
+        Mais qui est ce moustachu excentrique, maître des montres molles ?
+        </p>
+        <label>
+          <input type="radio" name="artiste" value="Dali" />
+          Un peintre surréaliste à l’imagination débridée
+        </label><br />
+        <label>
+          <input type="radio" name="artiste" value="Marx" />
+          Un chef cuisinier passionné par les œufs brouillés
+        </label><br />
+        <label>
+          <input type="radio" name="artiste" value="Magicien" />
+          Un magicien spécialisé dans la disparition d’ennui (pas toujours avec succès 😴)
+        </label><br />
+      <button onclick="validateStep2()">Valider</button>
+    </section>
+      
+    <section id="step3" class="step">
+        <h2>Ch’est tout carabistoulles chu qu’ té dis</h2>
+        <p>Écoute ce court extrait sonore. Quelle langue entends-tu ?</p>
+        <audio controls>
+          <source src="audio/espagnol.mp3" type="audio/mpeg">
+          Ton navigateur ne supporte pas l’audio.
+        </audio><br />
+        <label>
+          <input type="radio" name="language" value="Portugais" />
+          Portugais
+        </label><br />
+        <label>
+          <input type="radio" name="language" value="Espagnol" />
+          Espagnol
+        </label><br />
+        <label>
+          <input type="radio" name="language" value="Italien" />
+          Italien
+        </label><br />
+        <button onclick="validateStep3()">Valider</button>
+    </section>
+      
+    <section id="step4" class="step">
+      <h2>Un petit puzzle</h2>
+      <iframe src="https://www.jigsawplanet.com/?rc=play&amp;pid=20781528092a&amp;view=iframe&amp;bgcolor=0xd8a47f&savegame=0" style="width:100%;height:600px" frameborder="0" allowfullscreen></iframe>
+      <p>Quel est ce monument?</p>
+      <label>
+        <input type="radio" name="monument" value="Sevilla" />
+        Catedral de Sevilla
+      </label><br />
+      <label>
+        <input type="radio" name="monument" value="Sagrada" />
+        Sagrada Família
+      </label><br />
+      <label>
+        <input type="radio" name="monument" value="Torre" />
+        Torre de Madrid
+      </label><br />
+      <button onclick="validateStep4()">Valider</button>
+    </section>    
+    
+    <section id="step5" class="step">
+      <h2>On s'approche ❤️</h2>
+      <p>Un autre génie du pinceau t’attend dans un musée niché dans les ruelles d’un quartier médiéval...
+      <p>Mais qui est-il ?</p>
+        <label>
+          <input type="radio" name="peintre" value="Frida Kahlo" />
+          Frida Kahlo
+        </label><br />
+        <label>
+          <input type="radio" name="peintre" value="Pablo Picasso" />
+          Pablo Picasso
+        </label><br />
+        <label>
+          <input type="radio" name="peintre" value="Matisse" />
+          Matisse
+        </label><br />
+        <button onclick="validateStep5()">Valider</button>
+    </section>
+      
+    <section id="step6" class="step">
+        <h2>C'est le moment de deviner</h2>
+        <p>Je suis une ville entre mer et montagne, <br/>
+          J’ai un stade de légende et des mosaïques qui vous gagnent.<br/>
+          Du quartier gothique à la Rambla animée,<br/>
+          Je suis catalane, colorée, et ensoleillée.<br/>
+          </p><br/>
+
+          <label for="fname">Qui suis-je ?</label><br>
+          <input type="text" id="fname" name="fname"><br>
+        
+        <button onclick="validateStep6()">Valider</button>
+      </section>
+
+    <!-- autres étapes ici -->
+
+    <section id="step7" class="step">
+      <h2>Destination trouvée 🎉</h2>
+      <p>Prépare tes valises pour un week-end magique…</p>
+      <p>On décolle le vendredi 10 octobre à 20h55 de Genève, destination Barcelone</p>
+    </section>
+  </main>
+  <script src="script/main.js"></script>
+</body>
+</html>

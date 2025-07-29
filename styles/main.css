@@ -1,0 +1,106 @@
+:root {
+    --color-bg: #fdfaf6;
+    --color-primary: #d8a47f;
+    --color-secondary: #6d6875;
+    --color-accent: #ffb997;
+    --color-text: #333;
+  
+    --font-title: 'Georgia', serif;
+    --font-body: 'Helvetica Neue', sans-serif;
+  }
+  
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #fdf8f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+  }
+  
+  .container {
+    max-width: 600px;
+    margin: auto;
+    padding: 2rem 1rem;
+  }
+  
+  h1, h2 {
+    color: #aa4a44;
+    text-align: center;
+  }
+  
+  .step {
+    display: none;
+  }
+  
+  .step.active {
+    display: block;
+    animation: fadeIn 0.4s ease-in-out;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 1rem auto;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+  
+  button, input[type="submit"] {
+    background-color: #ee6c4d;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: block;
+    margin: 1rem auto;
+  }
+  
+  button:hover, input[type="submit"]:hover {
+    background-color: #d8573d;
+  }
+  
+  .qcm {
+    margin: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  
+  .qcm label {
+    background-color: #fff;
+    border: 2px solid #ee6c4d;
+    border-radius: 8px;
+    padding: 0.75rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+  }
+  
+  .qcm input[type="radio"] {
+    display: none;
+  }
+  
+  .qcm input[type="radio"]:checked + label {
+    background-color: #ee6c4d;
+    color: white;
+    transform: scale(1.02);
+  }
+  
+  input[type="text"] {
+    width: 100%;
+    padding: 0.75rem;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    margin-top: 1rem;
+    box-sizing: border-box;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
